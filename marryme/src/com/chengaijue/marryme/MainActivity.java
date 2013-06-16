@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -70,6 +71,7 @@ public class MainActivity extends Activity {
                 super.onPageStarted(view, url, favicon);
             }
         }); 
+        webview.setWebChromeClient(new WebChromeClient() {});
     }
 
 
