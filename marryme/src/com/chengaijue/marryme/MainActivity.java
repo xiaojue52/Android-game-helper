@@ -18,10 +18,12 @@ public class MainActivity extends Activity {
 
 	Boolean loading = false;
 	Boolean starting = false;
+	private PerformCommand performCommand;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        performCommand = new PerformCommand(this);
         final EditText uText = (EditText)this.findViewById(R.id.uText);
         final Button uButton = (Button)this.findViewById(R.id.uButton);
         final WebView webview = (WebView)this.findViewById(R.id.webview);
@@ -56,7 +58,7 @@ public class MainActivity extends Activity {
             public void onPageFinished(WebView view, String url) 
             {
             	if (starting){
-            		PerformCommand.doClick(view, url);
+            		performCommand.doClick(view, url);
             	}
             	loading = false;
             	uButton.setText("(0!0)");

@@ -1,11 +1,15 @@
 package com.chengaijue.marryme;
 
+import android.content.Context;
 import android.webkit.WebView;
 
 public class PerformCommand {
 
-	public static void doClick(WebView w, String url){
-		w.loadUrl("javascript:" +
-				"alert('111');");	
+	private Context context;
+	public PerformCommand(Context context){
+		this.context = context;
+	}
+	public void doClick(WebView w, String url){
+		w.loadUrl("javascript:");	
 	}
 }
