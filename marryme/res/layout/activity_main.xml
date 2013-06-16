@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="0.1"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:text="@string/go"/>
+
+        <EditText
+            android:id="@+id/uText"
+            android:layout_width="0dip"
+            android:layout_height="48dip"
+            android:layout_weight="0.7"
+            android:singleLine="true"
+            android:text="@string/prex" />
+
+        <Button
+            android:id="@+id/uButton"
+            android:layout_weight="0.2"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:text="@string/yes"/>
+
+    </LinearLayout>
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>"
+
+</LinearLayout>
