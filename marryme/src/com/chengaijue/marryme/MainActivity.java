@@ -30,8 +30,8 @@ public class MainActivity extends Activity {
         WebSettings wSettings = webview.getSettings();
         wSettings.setJavaScriptEnabled(true);
         
-        
-        webview.loadUrl("http://pt.3g.qq.com/s?aid=cpgamelogin&cpid=1&gameid=10&go_url=http%3A%2F%2Fmg.3g.qq.com%2Flogin.jsp%3Fcpid%3D1%26gameid%3D10%26from%3DmgameHome%26cid%3D0%26pcid%3D0");
+        webview.loadUrl("http://221.130.15.28:8090/s?ID=1009186231&S=1009186231i9wx&O=YX&K=FrrhrJPQaucN78fu&IMG=11111&C=iRk8U95XnO");
+        //webview.loadUrl("http://pt.3g.qq.com/s?aid=cpgamelogin&cpid=1&gameid=10&go_url=http%3A%2F%2Fmg.3g.qq.com%2Flogin.jsp%3Fcpid%3D1%26gameid%3D10%26from%3DmgameHome%26cid%3D0%26pcid%3D0");
         uButton.setOnClickListener(new Button.OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
