@@ -13,11 +13,11 @@ for (var i=0;i<aElements.length;i++){
 
 	if(text.indexOf(doText)!=-1){
 		/*alert(aElements[i].innerText);*/
-		setTimeout(doSom,time);
+		setTimeout(function(){doSom(aElements[i]);},time);
 		break;
 	}
 }
-function doSom(){
-	
-	alert(windows.location);
+function doSom(ele){
+	window.location = ele.href;
+	/*alert(window.location);*/
 }

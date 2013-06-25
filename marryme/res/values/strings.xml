@@ -8,5 +8,6 @@
     <string name="yes">(0!0)</string>
     <string name="prex">http://</string>
 	<string name="controller">start</string>
+	<string name="setting">Setting</string>
     
 </resources>

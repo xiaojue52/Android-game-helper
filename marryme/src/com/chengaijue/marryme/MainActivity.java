@@ -3,6 +3,8 @@ package com.chengaijue.marryme;
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -19,6 +22,7 @@ public class MainActivity extends Activity {
 	Boolean loading = false;
 	Boolean starting = false;
 	private PerformCommand performCommand;
+	private PopupWindow pw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,6 +94,7 @@ public class MainActivity extends Activity {
         {
         	case R.id.action_settings: 
         		//Toast.makeText(this, "1", Toast.LENGTH_LONG).show();
+        		this.showPop();
         		break;
         	case R.id.action_controller:
         		if (starting){
@@ -107,6 +112,14 @@ public class MainActivity extends Activity {
         		//break;
         }
         return true;
+    }
+    
+    private void showPop(){
+    	LayoutInflater inflater = (LayoutInflater)
+    			this.getSystemService(this.LAYOUT_INFLATER_SERVICE); 
+    	View vPopupWindow = inflater.inflate(R.layout.settings, null,false);
+    	pw = new PopupWindow(vPopupWindow,300,300,true);
+    	pw.showAtLocation(this.findViewById(R.id.webview), Gravity.CENTER, 0, 0); 
     }
     
 }
